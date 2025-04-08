@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { BsFillEyeSlashFill, BsFillEyeFill, BsFillPersonFill, BsFillKeyFill, BsFillEnvelopeFill } from "react-icons/bs";
+import { BsFillEyeSlashFill, BsFillEyeFill, BsFillKeyFill, BsFillEnvelopeFill } from "react-icons/bs";
 import styles from "./../styles/Login.module.css";
 import { isValidEmail } from "@/app/utils/validation";
 
