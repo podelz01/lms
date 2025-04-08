@@ -1,0 +1,162 @@
+/* styles/Profile.module.css */
+.container {
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.profileHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profileImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Hide overlay by default */
+  transition: opacity 0.3s ease; /* Add transition for smooth effect */
+}
+
+.profileImage:hover .imageOverlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.cameraIcon {
+  font-size: 2em;
+  color: white;
+}
+
+.profileImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.profileCircle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size:3em;
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: #eee;
+  margin-bottom: 20px;
+}
+
+.profileDetails {
+  width: 100%;
+}
+
+.detailItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align to the top */
+  margin-bottom: 15px;
+}
+
+.label {
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+
+.editButton {
+  background-color: #009688; /* Example background color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0; /* Add some space above the button */
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.formGroup label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.formGroup input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.saveButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancelButton {
+  border: none;
+  padding: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0; /* Add some space above the button */
+  display: flex;
+  align-items: center;
+}
+
+.cancelIcon{
+  margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .profileHeader {
+    margin-right: 40px;
+  }
+
+  .profileImage {
+    width: 150px;
+    height: 150px;
+  }
+
+  .profileCircle {
+    font-size:5em;
+  }  
+
+  .profileDetails {
+    width: auto;
+    text-align: left;
+  }
+}

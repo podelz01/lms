@@ -1,0 +1,201 @@
+/* styles/Admin.module.css */
+.container {
+  padding: 20px;
+  display: grid;
+}
+.container h1 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+.searchContainer {
+  margin-bottom: 20px;
+}
+.searchContainer input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.createButtonContainer {
+  display: flex;
+  justify-content: flex-end; /* Align button to the right */
+  margin-bottom: 20px;
+}
+.createButton {
+  background-color: #009688;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tableContainer {
+  overflow-x: auto; /* Enable horizontal scroll */
+  width: 100%;
+}
+
+.adminTable {
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.adminTable th,.adminTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  white-space: nowrap;
+  width: 150px; /* Adjust as needed */
+}
+.adminTable button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+.adminTable tr[data-active="true"] td:nth-child(5) button {
+  background-color: #28a745;
+}
+.adminTable tr[data-active="false"] td:nth-child(5) button {
+  background-color: #dc3545;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+.pagination button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.formContainer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}.formContainer h2 {
+  font-size: 1.1em;
+}.formContainer div {
+  margin-bottom: 10px;
+}.formContainer label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;  
+}.formContainer input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.formContainer select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  appearance: none; /* Remove default appearance */
+  -webkit-appearance: none; /* For Safari */
+  background-color: #fff; /* Add background color */
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z' fill='rgba(0,0,0,1)'/%3E%3C/svg%3E"); /* Add down arrow image */
+  background-repeat: no-repeat;
+  background-position: right 10px center; /* Position the arrow */
+  padding-right: 30px; /* Add padding to accommodate the arrow */  
+}
+
+.formContainer button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+}.formContainer button:nth-child(2) {
+  background-color: #dc3545;
+}.error {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+.container {
+    padding: 10px;
+  }
+
+.container h1 {
+    font-size: 1.2em;
+  }
+
+.searchContainer {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+.searchContainer input {
+    font-size: 0.9em;
+  }
+
+.createButtonContainer {
+    justify-content: flex-start; /* Center the button on mobile */
+  }
+
+.createButton {
+    padding: 8px 15px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+  }
+
+.adminTable th,
+.adminTable td {
+    padding: 6px;
+  }
+
+.adminTable button {
+    padding: 4px 8px;
+    font-size: 0.7em;
+  }
+
+.pagination button {
+    margin: 0 3px;
+    padding: 6px 8px;
+    font-size: 0.9em;
+  }
+
+.formContainer {
+    padding: 10px;
+  }
+
+.formContainer h2 {
+    font-size: 1em;
+  }
+
+.formContainer div {
+    margin-bottom: 8px;
+  }
+
+.formContainer label {
+    font-size: 0.9em;
+  }
+
+.formContainer input {
+    font-size: 0.9em;
+  }
+
+.formContainer button {
+    padding: 8px 15px;
+    margin: 8px 4px 0;
+    font-size: 0.9em;
+  }
+}

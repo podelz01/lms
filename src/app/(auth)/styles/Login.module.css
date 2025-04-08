@@ -1,0 +1,175 @@
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: white; /* White text color */
+  background-color: #000;
+}
+
+.content {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: grid; /* Use grid layout */
+  grid-template-columns: 3fr 2fr; /* Left side wider */
+  width: 80%;
+  max-width: 1200px; /* Limit max-width for larger screens */
+}
+
+.leftSide {
+  width: 3fr;
+  padding: 40px;
+  text-align: center;
+  background-color: #009688; /* Teal background */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.leftSide p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.rightSide {
+  width: 2fr;
+  padding: 40px;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.rightSide a{
+  color: #009688;
+}
+
+.rightSide h1{
+  font-size: 24px;
+  color: #000;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.rightSide input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.passwordOptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.showPassword {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+  color: rgba(0, 0, 0, 0.5);
+  /* Add show/hide password icon here */
+}
+
+.loginButton {
+  background-color: #009688;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.signup {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.skip {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 0;
+
+}
+
+.inputGroup input {
+  border: none; /* Remove default input border */
+  flex-grow: 1; /* Allow input to take available space */
+  padding: 12px;
+  margin: 0;
+  outline: none;
+}
+
+.inputIcon {
+  margin: 10px; /* Add spacing between icon and input */
+  font-size: 1.2em; /* Adjust icon size as needed */
+}
+
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr; /* Stack columns vertically on mobile */
+  }
+}
+
+
+
+.page-transition-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all 300ms  
+ ease-in-out;
+}
+
+.page-transition-exit {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 300ms  
+ ease-in-out;
+}
+
+.error {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 5px;
+}

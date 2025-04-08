@@ -1,0 +1,214 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: #009688; /* Teal sidebar color */
+  color: #fff; /* White text color for sidebar */
+  transition: transform 0.3s ease-in-out;
+  /* transform: translateX(-240px);  */
+  padding-top: 60px;
+  flex-shrink: 0;
+}
+
+.sidebar.open {
+  transform: translateX(0); /* Show sidebar */
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  display:flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.sidebar nav ul li a {
+  color: #fff; /* White link color */
+  text-decoration: none;
+  display: block;
+}
+
+.main {
+  flex-grow: 1;
+  padding: 20px;
+  padding-top: 60px; /* Add top padding to main content */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  position: absolute; /* Position header absolutely */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* Ensure header is on top */
+  background-color: #fff; /* Example background color */
+  padding: 10px 20px; /* Add padding to header */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow to header */
+  border-bottom: 1px solid #eee; /* Add light line separator */
+}
+
+
+.topNav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Arrange menu items horizontally */
+}
+
+.topNav li {
+  margin-left: 20px; /* Add space between menu items */
+}
+
+.topNav a {
+  text-decoration: none;
+  color: #333; /* Example link color */
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.headerTitle {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+.menuButton {
+  display: none;
+}
+
+
+.dropdownContainer {
+  position: relative; /* Allow dropdown to position relative to this */
+}
+
+.dropdownButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex; /* Enable flexbox for alignment */
+  align-items: center; /* Align items vertically */
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+}
+
+.dropdownMenu li {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.dropdownMenu a {
+  text-decoration: none;
+  color: #333;
+}
+
+.profileCircle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.dropdownIcon {
+  margin-left: 5px; /* Add space between circle and icon */
+}
+
+.menuIcon {
+  margin-right: 8px;
+}
+
+.groupHeader {
+  font-weight: bold;
+  padding: 10px 20px;
+  display: flex; /* Make group header a flex container */
+  align-items: center; /* Align icon and text vertically */
+  cursor: pointer; /* Indicate that it's clickable */
+}
+
+.toggleIcon {
+  margin-left: auto; /* Push toggle icon to the right */
+}
+
+.nestedItem {
+  margin-left: 10px; /* Add extra indentation for nested items */
+}
+
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed; /* Fix sidebar to the viewport */
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(-100%); /* Initially hidden off-screen */
+    z-index: 1000; /* Ensure sidebar is on top */
+    padding-top: 30px;
+  }
+
+  .sidebar.open {
+    transform: translateX(0); /* Show sidebar */
+  }
+
+  .main {
+    margin-left: 0; /* Remove margin when sidebar is hidden */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .header {
+    flex-direction: row; /* Stack header elements horizontally */
+    align-items:  space-between; /* Distribute space between elements */
+  }
+
+  .headerTitle {
+    margin-top: 0; /* Remove any existing margin */
+  }
+
+  .content {
+    margin-top: 60px; /* Adjust margin to account for the header */
+  }
+
+  .menuButton {
+    display: block; /* Ensure menu button is visible on mobile */
+  }
+
+}

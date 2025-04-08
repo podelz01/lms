@@ -1,0 +1,227 @@
+/* styles/Employee.module.css */.container {
+  padding: 20px;
+}.container h1 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}.searchContainer {
+  margin-bottom: 20px;
+}.searchContainer input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}.createButtonContainer {
+  display: flex;
+  justify-content: flex-end; /* Align button to the right */
+  margin-bottom: 20px;
+  gap: 10px;
+}.createButton {
+  background-color: #009688;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+}.tableContainer {
+  width: 100%;
+  overflow-x: auto; /* Enable horizontal scroll */
+}
+
+
+.employeeTable {
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.employeeTable th,.employeeTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  white-space: nowrap;
+  width: 150px; /* Adjust as needed */
+}
+
+.employeeTable button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8em;
+}.employeeTable tr[data-active="true"] td:nth-child(5) button {
+  background-color: #28a745;
+}.employeeTable tr[data-active="false"] td:nth-child(5) button {
+  background-color: #dc3545;
+}.pagination {
+  display: flex;
+  justify-content: center;
+}.pagination button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}.formContainer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}.formContainer h2 {
+  font-size: 1.1em;
+}.formContainer div {
+  margin-bottom: 10px;
+}.formContainer label {
+  display: block;
+  margin-bottom: 5px;
+}.formContainer input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}.formContainer button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+}.formContainer button:nth-child(2) {
+  background-color: #dc3545;
+}.error {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
+.importContainer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}.importContainer h2 {
+  font-size: 1.1em;
+}.importContainer div {
+  margin-bottom: 10px;
+}.importContainer label {
+  display: block;
+  margin-bottom: 5px;
+}.importContainer input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}.importContainer button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+}.importContainer button:nth-child(2) {
+  background-color: #dc3545;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+.container {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+  }
+
+.container h1 {
+    font-size: 1.2em;
+  }
+
+.searchContainer {
+    margin-bottom: 10px;
+    grid-column: 1 / -1; /* Span across all columns */
+  }
+
+.searchContainer input {
+    font-size: 0.9em;
+  }
+
+.createButtonContainer {
+    justify-content: flex-start;
+    /* Align to the left on mobile */
+    grid-column: 1 / -1; /* Span across all columns */
+    flex-direction: column; /* Stack buttons vertically on mobile */
+    align-items: flex-start; /* Align buttons to the left */
+  }
+
+
+.createButton {
+    padding: 8px 15px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.tableContainer {
+    overflow-x: auto;
+    /* Enable horizontal scroll */
+    width: 100%;
+    grid-column: 1 / -1; /* Span across all columns */
+  }
+
+.employeeTable {
+    width: 1500px;
+    /* Adjust width as needed for mobile */
+  }
+
+.employeeTable th,
+.employeeTable td {
+    padding: 6px;
+  }
+
+.employeeTable button {
+    padding: 4px 8px;
+    font-size: 0.7em;
+  }
+
+.pagination {
+    grid-column: 1 / -1; /* Span across all columns */
+  }
+
+.pagination button {
+    margin: 0 3px;
+    padding: 6px 8px;
+    font-size: 0.9em;
+  }
+
+.formContainer {
+    padding: 10px;
+    grid-column: 1 / -1; /* Span across all columns */
+  }
+
+.formContainer h2 {
+    font-size: 1em;
+  }
+
+.formContainer div {
+    margin-bottom: 8px;
+  }
+
+.formContainer label {
+    font-size: 0.9em;
+  }
+
+.formContainer input {
+    font-size: 0.9em;
+  }
+
+.formContainer button {
+    padding: 8px 15px;
+    margin: 8px 4px 0;
+    font-size: 0.9em;
+  }
+}

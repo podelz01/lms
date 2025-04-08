@@ -1,0 +1,250 @@
+/* styles/Clients.module.css */
+
+.container {
+  padding: 20px;
+}
+
+.container h1 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.searchContainer {
+  margin-bottom: 20px;
+}
+
+.searchContainer input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.createButton {
+  background-color: #009688;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+
+.clientTable {
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 0.9em;
+}
+
+.clientTable th,
+.clientTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.clientTable button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+
+
+.clientTable tr[data-active="true"] button:nth-child(3) {
+  background-color: #28a745;
+}
+
+.clientTable tr[data-active="false"] button:nth-child(3) {
+  background-color: #dc3545;
+}
+
+
+
+.clientTable td:first-child { 
+  cursor: pointer;
+}
+
+.clientTable td:first-child:hover {
+  background-color: #f5f5f5;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.formContainer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.formContainer h2 {
+  font-size: 1.1em;
+}
+
+.formContainer div {
+  margin-bottom: 10px;
+}
+
+.formContainer label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.formContainer input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.formContainer button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.formContainer button:nth-child(2) {
+  background-color: #dc3545;
+}
+
+
+
+.clientDetailsContainer {
+  margin-top: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.clientDetailsContainer h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.clientDetailsContainer div {
+  margin-bottom: 10px;
+}
+
+.clientDetailsContainer > div > div { /* Target the detail items */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.clientDetailsContainer .label {
+  font-weight: bold;
+  font-size: 0.8em;
+  margin-bottom: 5px;
+}
+
+.clientDetailsContainer button {
+  background-color: #007bff; /* Blue background for buttons */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.clientDetailsContainer button:nth-child(2) { /* Style the Cancel button */
+  background-color: #dc3545; /* Red background */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+    display: grid;
+  }
+
+  .container h1 {
+    font-size: 1.2em;
+  }
+
+  .searchContainer {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .searchContainer input {
+    font-size: 0.9em;
+  }
+
+  .createButtonContainer{
+    display: flex;
+  }
+
+  .createButton {
+    padding: 8px 15px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+  }
+
+  .tableContainer {
+    overflow-x: auto; /* Enable horizontal scroll */
+    width: 100%;
+  }
+  
+  .pagination button {
+    margin: 0 3px;
+    padding: 6px 8px;
+    font-size: 0.9em;
+  }
+
+  .formContainer {
+    padding: 10px;
+  }
+
+  .formContainer h2 {
+    font-size: 1em;
+  }
+
+  .formContainer div {
+    margin-bottom: 8px;
+  }
+
+  .formContainer label {
+    font-weight: bold;
+    font-size: 0.8em;
+    margin-bottom: 5px;
+  
+  }
+
+  .formContainer input {
+    font-size: 0.9em;
+  }
+
+  .formContainer button {
+    padding: 8px 15px;
+    margin: 8px 4px 0;
+    font-size: 0.9em;
+  }
+}
